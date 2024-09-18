@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Edit Record</h1>
+    <form action="/api/update/<%= record._id %>" method="POST">
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" value="<%= record.department %>" required>
+
+        <label for="insuranceCompany">Insurance Company:</label>
+        <input type="text" id="insuranceCompany" name="insuranceCompany" value="<%= record.insuranceCompany %>"
+            required>
+
+        <label for="premium">Premium:</label>
+        <input type="text" id="premium" name="premium" value="<%= record.premium %>">
+
+        <label for="insuranceType">Insurance Type:</label>
+        <input type="text" id="insuranceType" name="insuranceType" value="<%= record.insuranceType %>" required>
+
+        <label for="grossPremium">Gross Premium:</label>
+        <input type="text" id="grossPremium" name="grossPremium" value="<%= record.grossPremium %>">
+
+        <label for="employeeId">Employee ID:</label>
+        <input type="text" id="employeeId" name="employeeId" value="<%= record.employeeId %>" required>
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" value="<%= record.id %>" readonly>
+
+        <label for="startDate">Start Date:</label>
+        <input type="text" id="startDate" name="startDate" value="<%= record.startDate %>" required>
+
+        <label for="endDate">End Date:</label>
+        <input type="text" id="endDate" name="endDate" value="<%= record.endDate %>" required>
+
+        <label for="carNumber">Car Number:</label>
+        <input type="text" id="carNumber" name="carNumber" value="<%= record.carNumber %>">
+
+        <label for="reason">Reason:</label>
+        <input type="text" id="reason" name="reason" value="<%= record.reason %>">
+
+        <label for="typeOfLeave">Type of Leave:</label>
+        <input type="text" id="typeOfLeave" name="typeOfLeave" value="<%= record.typeOfLeave %>" required>
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+
+</html>

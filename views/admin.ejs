@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Admin Panel</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Insurance Company</th>
+                <th>Premium</th>
+                <th>Insurance Type</th>
+                <th>Gross Premium</th>
+                <th>Employee ID</th>
+                <th>ID</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Car Number</th>
+                <th>Reason</th>
+                <th>Type of Leave</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% records.forEach(record=> { %>
+                <tr>
+                    <td>
+                        <%= record.department %>
+                    </td>
+                    <td>
+                        <%= record.insuranceCompany %>
+                    </td>
+                    <td>
+                        <%= record.premium %>
+                    </td>
+                    <td>
+                        <%= record.insuranceType %>
+                    </td>
+                    <td>
+                        <%= record.grossPremium %>
+                    </td>
+                    <td>
+                        <%= record.employeeId %>
+                    </td>
+                    <td>
+                        <%= record.id %>
+                    </td>
+                    <td>
+                        <%= record.startDate %>
+                    </td>
+                    <td>
+                        <%= record.endDate %>
+                    </td>
+                    <td>
+                        <%= record.carNumber %>
+                    </td>
+                    <td>
+                        <%= record.reason %>
+                    </td>
+                    <td>
+                        <%= record.typeOfLeave %>
+                    </td>
+                    <td>
+                        <a href="/api/edit/<%= record.id %>">Edit</a>
+                        <a href="/api/delete/<%= record.id %>">Delete</a>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</body>
+
+</html>
