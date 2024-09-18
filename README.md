@@ -22,7 +22,7 @@ This project demonstrates the integration between Zoho Creator and a MongoDB dat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/zoho-mongodb-integration.git
+   git clone https://github.com/Rahul-Kushwaha-1818/zoho-data-fetcher.git
    ```
 2. Navigate to the project folder:
    ```bash
@@ -115,10 +115,5 @@ After setting up Zoho's API, the next step is connecting the fetched data to Mon
    npm start
    ```
 
-## License
-
-This project is licensed under the MIT License.
 
 ---
-
-Let me know if you'd like to add or change anything!
