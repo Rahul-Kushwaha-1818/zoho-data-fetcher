@@ -94,7 +94,7 @@ Once connected, the project can perform various operations such as fetching repo
 
 - **Update an existing record:**
   ```bash
-  https://creator.zoho.in/api/v2/dev_it/my-first-project/report/All_Leave_Requests/210184000000023007
+  https://creator.zoho.in/api/v2/dev_it/my-first-project/report/All_Leave_Requests/{ID}
   ```
 
 ## MongoDB Connection
